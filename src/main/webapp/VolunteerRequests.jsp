@@ -41,21 +41,21 @@
                             <%
                                 if(a instanceof Area){
                             %>
-                            <li><div class="column">Start</div><div class="column"><%=((Area) a).getAddress()%></div><div class="column"> - </div><div class="column"> - </div><div class="column"> - </div></li>
+                            <li><div class="column1">Start</div><div class="column1"><%=((Area) a).getAddress()%></div><div class="column1"> - </div><div class="column1"> - </div><div class="column1"> - </div></li>
                             <%
                                 }
                             %>
                             <%
                                 if(a instanceof Shop){
                             %>
-                            <li><div class="column">Shop</div><div class="column"><%=((Shop) a).getAddress()%></div><div class="column"><%=((Shop) a).getName()%></div><div class="column"> - </div><div class="column"> - </div></li>
+                            <li><div class="column1">Shop</div><div class="column1"><%=((Shop) a).getAddress()%></div><div class="column1"><%=((Shop) a).getName()%></div><div class="column1"> - </div><div class="column1"> - </div></li>
                             <%
                                 }
                             %>
                             <%
                                 if(a instanceof Request){
                             %>
-                            <li><div class="column">Request</div><div class="column"><%=((Request) a).getRequestedBy().getAddress()%></div><div class="column"><%=((Request) a).getRequestedBy().getFirstName()%> <%=((Request) a).getRequestedBy().getLastName()%></div><div class="column"><%=((Request) a).getProduct()%>></div><div class="column"><%=((Request) a).getQuantity()%></div></li>
+                            <li><div class="column1">Request</div><div class="column1"><%=((Request) a).getRequestedBy().getAddress()%></div><div class="column1"><%=((Request) a).getRequestedBy().getFirstName()%> <%=((Request) a).getRequestedBy().getLastName()%></div><div class="column1"><%=((Request) a).getProduct()%></div><div class="column1"><%=((Request) a).getQuantity()%></div></li>
                             <%
                                 }
                             %>

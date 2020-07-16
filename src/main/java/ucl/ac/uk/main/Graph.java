@@ -135,7 +135,7 @@ public class Graph {
             Shop shop = (Shop) node;
             Calendar time = (Calendar) startTime.clone();
             time.add(Calendar.MINUTE, (int) minutesToWalkAndWait(distance));
-            if(!shop.isOpen(time.get(Calendar.DAY_OF_WEEK), time.get(Calendar.HOUR), time.get(Calendar.MINUTE))){
+            if(!shop.isOpen(time.get(Calendar.DAY_OF_WEEK), time.get(Calendar.HOUR_OF_DAY), time.get(Calendar.MINUTE))){
                 visited.remove(visited.size() - 1);
                 return;
             }
