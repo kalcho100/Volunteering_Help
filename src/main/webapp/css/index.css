@@ -1,0 +1,70 @@
+body{
+    background-color: rgb(68, 185, 194);
+}
+
+header{
+    background: #06609c;
+    position: absolute;
+    padding-top: 0;
+    padding-bottom: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+}
+
+.title{
+    position: absolute;
+    top: 7px;
+    left: 300px;
+    font-size: 50px;
+}
+
+.loginLabel{
+    position: absolute;
+    top: 22px;
+    right: 470px;
+    font-size: 25px;
+}
+
+input{
+    height: 22px;
+}
+select{
+    width: 186px;
+    height: 25px;
+}
+
+.loginForm{
+    position: absolute;
+    top: 22px;
+    right: 35px;
+}
+
+.loginButton{
+    cursor: pointer;
+}
+
+.register{
+    position: absolute;
+    height: 500px;
+    width: 500px;
+    top: 200px;
+    right: 100px;
+    line-height: 35px;
+    background-color: rgb(240, 240, 220);
+    font-size: 25px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.6);
+}
+
+.registerRadio{
+    font-size: 22px;
+    text-align: center;
+}
+
+.registerForms{
+    position: absolute;
+    top: 75px;
+    right: 150px;
+    text-align: right;
+}

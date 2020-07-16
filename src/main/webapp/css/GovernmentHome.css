@@ -1,0 +1,92 @@
+body{
+    background-color: #cce8ff;
+}
+
+header{
+    background: #2eacff;
+    position: fixed;
+    padding-top: 0;
+    padding-bottom: 0;
+    top: 0;
+    left: 0;
+    text-align: center;
+    font-size: 50px;
+    width: 100%;
+    height: 60px;
+}
+
+.welcomeBack{
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:20px 0;
+    text-align:center;
+    overflow:hidden;
+}
+
+.welcomeBackSign{
+    font:bold 7.5vw/1.6 'Signika', sans-serif;
+    user-select:none;
+}
+
+.welcomeBackSign span {
+    display:inline-block;
+    animation:float .2s ease-in-out infinite;
+}
+
+span:nth-child(4n) { color:hsl(50, 75%, 55%); text-shadow:1px 1px hsl(50, 75%, 45%), 2px 2px hsl(50, 45%, 45%), 3px 3px hsl(50, 45%, 45%), 4px 4px hsl(50, 75%, 45%); }
+span:nth-child(4n-1) { color:hsl(135, 35%, 55%); text-shadow:1px 1px hsl(135, 35%, 45%), 2px 2px hsl(135, 35%, 45%), 3px 3px hsl(135, 35%, 45%), 4px 4px hsl(135, 35%, 45%); }
+span:nth-child(4n-2) { color:hsl(155, 35%, 60%); text-shadow:1px 1px hsl(155, 25%, 50%), 2px 2px hsl(155, 25%, 50%), 3px 3px hsl(155, 25%, 50%), 4px 4px hsl(140, 25%, 50%); }
+span:nth-child(4n-3) { color:hsl(30, 65%, 60%); text-shadow:1px 1px hsl(30, 45%, 50%), 2px 2px hsl(30, 45%, 50%), 3px 3px hsl(30, 45%, 50%), 4px 4px hsl(30, 45%, 50%); }
+
+.buttons{
+    position: absolute;
+    top: 57%;
+    width: 100%;
+    height: 43%;
+    display: inline-block;
+    text-align: center;
+}
+
+.button{
+    position: relative;
+    top: 50px;
+    border: none;
+    vertical-align: middle;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    height: 100px;
+    min-width: max-content;
+    cursor: pointer;
+    width: 400px;
+    font-size: 40px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.6);
+}
+
+.governmentVulnerables {
+    position: relative;
+    right: 150px;
+    background-color: #21b9ff;
+    color: black;
+}
+
+.governmentVulnerables:hover {
+    background-color:  #219aff;
+    color: white;
+}
+
+.governmentDetails {
+    position: relative;
+    left: 150px;
+    background-color: #21b9ff;
+    color: black;
+}
+
+.governmentDetails:hover {
+    background-color:  #219aff;
+    color: white;
+}

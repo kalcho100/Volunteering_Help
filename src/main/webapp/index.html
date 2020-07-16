@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Volunteering</title>
+    <meta name="description" content="App for helping vulnerable people">
+    <meta name="author" content="Kaloyan Rusev">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="content-type" content="text/html" charset="UTF-8">
+    <link rel="stylesheet" href="css/index.css">
+    <script>
+        function display(val) {
+            if (val.value == "1") {
+                document.getElementById("governmentRegister").style.display = "block";
+                document.getElementById("shopRegister").style.display = "none";
+                document.getElementById("vulnerableRegister").style.display = "none";
+                document.getElementById("volunteerRegister").style.display = "none";
+            }
+            else if (val.value == "2") {
+                document.getElementById("governmentRegister").style.display = "none";
+                document.getElementById("shopRegister").style.display = "block";
+                document.getElementById("vulnerableRegister").style.display = "none";
+                document.getElementById("volunteerRegister").style.display = "none";
+            }
+            else if (val.value == "3") {
+                document.getElementById("governmentRegister").style.display = "none";
+                document.getElementById("shopRegister").style.display = "none";
+                document.getElementById("vulnerableRegister").style.display = "block";
+                document.getElementById("volunteerRegister").style.display = "none";
+            }
+            else if (val.value == "4") {
+                document.getElementById("governmentRegister").style.display = "none";
+                document.getElementById("shopRegister").style.display = "none";
+                document.getElementById("vulnerableRegister").style.display = "none";
+                document.getElementById("volunteerRegister").style.display = "block";
+            }
+        }
+    </script>
+</head>
+
+<body>
+<header>
+    <div class="title">
+        Volunteering
+    </div>
+
+    <div class="loginLabel">
+        Login:
+    </div>
+    <div class="loginForm">
+        <form action="/Login" method="post">
+            <input type="text" name="username" placeholder="Username" required />
+            <input type="password" name="password" placeholder="Password" required />
+            <input class="loginButton" type="submit" value="Login">
+        </form>
+    </div>
+</header>
+
+<div class="register">
+
+    <div class="registerRadio">
+        <form action="/Register" method="post">
+            <input id="Government" value="1" type="radio" name="formselector" onClick="display(this)" checked />
+            <label for="Government">Local council</label>
+            <input id="Shop" value="2" type="radio" name="formselector" onClick="display(this)" />
+            <label for="Shop">Shop</label>
+            <input id="Vulnerable" value="3" type="radio" name="formselector" onClick="display(this)" />
+            <label for="Vulnerable">Vulnerable</label>
+            <input id="Volunteer" value="4" type="radio" name="formselector" onClick="display(this)" />
+            <label for="Volunteer">Volunteer</label>
+        </form>
+    </div>
+    <div class="registerForms">
+        <form id="governmentRegister" action="/Register" method="POST" style="display: block;">
+            <input type="hidden" name="user" value="government">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" placeholder="Username" required /> <br />
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Password" required /> <br />
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" placeholder="Address" required /> <br />
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city" placeholder="City" required /> <br />
+            <label for="country">Country:</label>
+            <input type="text" id="country" name="country" placeholder="Country" required /> <br />
+            <input type="submit" value="Register">
+        </form>
+
+        <form id="shopRegister" action="/Register" method="POST" style="display: none;">
+            <input type="hidden" name="user" value="shop">
+            <label for="nameShop">Name:</label>
+            <input type="text" id="nameShop" name="name" placeholder="Name" required /> <br />
+            <label for="typeShop">Type:</label>
+            <select id="typeShop" name="type">
+            <option value="grocery store">Grocery store</option>
+            <option value="pharmacy">Pharmacy</option>
+        </select> <br />
+            <label for="usernameShop">Username:</label>
+            <input type="text" id="usernameShop" name="username" placeholder="Username" required /> <br />
+            <label for="passwordShop">Password:</label>
+            <input type="password" id="passwordShop" name="password" placeholder="Password" required /> <br />
+            <label for="addressShop">Address:</label>
+            <input type="text" id="addressShop" name="address" placeholder="Address" required /> <br />
+            <label for="cityShop">City:</label>
+            <input type="text" id="cityShop" name="city" placeholder="City" required /> <br />
+            <label for="countryShop">Country:</label>
+            <input type="text" id="countryShop" name="country" placeholder="Country" required /> <br />
+            <input type="submit" value="Register">
+        </form>
+
+
+        <form id="vulnerableRegister" action="/Register" method="POST" style="display: none;">
+            <input type="hidden" name="user" value="vulnerable">
+            <label for="firstVulnerable">First name:</label>
+            <input type="text" id="firstVulnerable" name="firstName" placeholder="First Name" required /> <br />
+            <label for="lastVulnerable">Last name:</label>
+            <input type="text" id="lastVulnerable" name="lastName" placeholder="Last name" required /> <br />
+            <label for="usernameVulnerable">Username:</label>
+            <input type="text" id="usernameVulnerable" name="username" placeholder="Username" required /> <br />
+            <label for="passwordVulnerable">Password:</label>
+            <input type="password" id="passwordVulnerable" name="password" placeholder="Password" required /> <br />
+            <label for="addressVulnerable">Address:</label>
+            <input type="text" id="addressVulnerable" name="address" placeholder="Address" required /> <br />
+            <label for="cityVulnerable">City:</label>
+            <input type="text" id="cityVulnerable" name="city" placeholder="City" required /> <br />
+            <label for="countryVulnerable">Country:</label>
+            <input type="text" id="countryVulnerable" name="country" placeholder="Country" required /> <br />
+            <input type="submit" value="Register">
+        </form>
+
+        <form id="volunteerRegister" action="/Register" method="POST" style="display: none;">
+            <input type="hidden" name="user" value="volunteer">
+            <label for="firstVolunteer">First name:</label>
+            <input type="text" id="firstVolunteer" name="firstName" placeholder="First Name" required /> <br />
+            <label for="lastVolunteer">Last name:</label>
+            <input type="text" id="lastVolunteer" name="lastName" placeholder="Last name" required /> <br />
+            <label for="usernameVolunteer">Username:</label>
+            <input type="text" id="usernameVolunteer" name="username" placeholder="Username" required /> <br />
+            <label for="passwordVolunteer">Password:</label>
+            <input type="password" id="passwordVolunteer" name="password" placeholder="Password" required /> <br />
+            <label for="addressVolunteer">Address:</label>
+            <input type="text" id="addressVolunteer" name="address" placeholder="Address" required /> <br />
+            <label for="cityVolunteer">City:</label>
+            <input type="text" id="cityVolunteer" name="city" placeholder="City" required /> <br />
+            <label for="countryVolunteer">Country:</label>
+            <input type="text" id="countryVolunteer" name="country" placeholder="Country" required /> <br />
+            <input type="submit" value="Register">
+        </form>
+
+    </div>
+</div>
+
+</body>
+
+</html>

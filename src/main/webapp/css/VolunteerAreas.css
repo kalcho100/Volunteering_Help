@@ -1,0 +1,279 @@
+body{
+    background-color: #cce8ff;
+}
+
+header{
+    background: #2eacff;
+    position: fixed;
+    padding-top: 0;
+    padding-bottom: 0;
+    top: 0;
+    left: 0;
+    text-align: center;
+    font-size: 50px;
+    width: 100%;
+    height: 60px;
+    z-index: 5;
+}
+
+.menu{
+    background: #219aff;
+    position: fixed;
+    padding-top: 0;
+    padding-bottom: 0;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    height: 45px;
+    z-index: 5;
+}
+
+.button {
+    position: relative;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+    height: 45px;
+    transition-duration: 0.4s;
+    min-width: 10%;
+    width: max-content;
+    cursor: pointer;
+}
+
+.button1 {
+    background-color: #219aff;
+    color: black;
+}
+
+.button1:hover {
+    background-color:  #21b9ff;
+    color: white;
+}
+
+.button2 {
+    background-color: #219aff;
+    color: black;
+}
+
+.button2:hover {
+    background-color: #21b9ff;
+    color: white;
+}
+
+.button3 {
+    background-color: #219aff;
+    color: black;
+}
+
+.button3:hover {
+    background-color:  #21b9ff;
+    color: white;
+}
+
+.button4 {
+    background-color: #21b9ff;
+    color: black;
+}
+
+.button4:hover {
+    background-color:  #219aff;
+    color: white;
+}
+
+.button5 {
+    background-color: #219aff;
+    color: black;
+}
+
+.button5:hover {
+    background-color:  #21b9ff;
+    color: white;
+}
+
+
+.list{
+    position: relative;
+    top: 105px;
+    left: 50px;
+    width: 60%;
+    z-index: 1;
+}
+
+ul {
+    counter-reset: index;
+    padding: 0;
+    max-width: 300px;
+}
+
+li {
+    counter-increment: index;
+    display: flex;
+    align-items: center;
+    padding: 12px 0;
+    box-sizing: border-box;
+    min-width: 500px;
+    width: max-content;
+}
+
+
+li::before {
+    content: counters(index, ".", decimal-leading-zero);
+    font-size: 1.5rem;
+    text-align: right;
+    font-weight: bold;
+    min-width: 50px;
+    padding-right: 12px;
+    font-variant-numeric: tabular-nums;
+    align-self: flex-start;
+    background-image: linear-gradient(to bottom, rgb(80, 238, 185), orangered);
+    background-attachment: fixed;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+li + li {
+    border-top: 1px solid rgba(7, 7, 7, 0.808);
+}
+
+.products{
+    width: 400px;
+}
+
+.days{
+    display: inline-block;
+    width: 120px;
+}
+
+input{
+    width: 150px;
+    margin-right: 60px;
+}
+
+input[type="text"]{
+    width: 200px;
+}
+
+input[type="datetime-local"]{
+    width: 200px;
+}
+
+.inputStart{
+    margin-right: 30px;
+}
+
+.inputFinish{
+    margin-left: 30px;
+    margin-right: 60px;
+}
+
+.address{
+    margin-left: 50px;;
+}
+
+.inputDays{
+    margin-right: 200px;
+}
+
+.listTitle{
+    display: flex;
+    font-size: 28px;
+}
+
+.start{
+    width: 60px;
+}
+
+.column{
+    text-align: center;
+    width: 250px;
+}
+
+.column1{
+    text-align: center;
+    width: 350px;
+}
+
+.column2{
+    text-align: center;
+    width: 450px;
+}
+
+.buttons{
+    position: fixed;
+    top: 300px;
+    left: 1200px;
+}
+
+.saveButton,.newButton{
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    height: 100px;
+    width: 400px;
+    font-size: 40px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.6);
+    background-color: #21b9ff;
+    cursor: pointer;
+}
+
+.newButton:hover{
+    background-color: #219aff;
+}
+
+.saveButton:hover{
+    background-color: #219aff;
+}
+
+.saveButton{
+    position: absolute;
+}
+
+.newButton{
+    position: absolute;
+    top: 200px;
+}
+
+.close {
+    position: relative;
+    margin-left: 10px;
+    width: 32px;
+    height: 32px;
+    opacity: 0.3;
+}
+.close:hover {
+    opacity: 1;
+}
+.close:before, .close:after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 33px;
+    width: 2px;
+    background-color: #333;
+}
+.close:before {
+    transform: rotate(45deg);
+}
+.close:after {
+    transform: rotate(-45deg);
+}
+
+@media screen and (max-width: 1500px) {
+    .column {
+        text-align: center;
+        width: 100px;
+    }
+
+    .buttons{
+        position: fixed;
+        top: 250px;
+        left: 800px;
+        margin: 0;
+        padding: 0;
+    }
+}
