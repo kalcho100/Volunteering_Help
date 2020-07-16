@@ -5,7 +5,7 @@ import java.util.*;
 
 public class Model {
     private final DataManager dataManager;
-    private Coordinates coordinates;
+    private final Coordinates coordinates;
     private User user;
 
     public Model(){
@@ -162,11 +162,15 @@ public class Model {
         for(Area area : areas){
             ArrayList<Shop> shops = listShopsInArea(area);
             for(Shop shop : shops){
-                if(shop.getQuantity(product) >= quantity){
-                    if(minutesToWalkAndWait(distance(area, shop)) + minutesToWalkAndWait(distance(shop, request.getRequestedBy())) <= area.getMinutesAvailable()){
-                        dummy.add(area);
-                        break;
+                try {
+                    if (shop.getQuantity(product) >= quantity) {
+                        if (minutesToWalkAndWait(distance(area, shop)) + minutesToWalkAndWait(distance(shop, request.getRequestedBy())) <= area.getMinutesAvailable()) {
+                            dummy.add(area);
+                            break;
+                        }
                     }
+                }catch (NullPointerException e){
+                    continue;
                 }
             }
         }

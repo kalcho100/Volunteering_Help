@@ -19,6 +19,9 @@ public class DataManager {
         vulnerables = new HashMap<>();
         shops = new HashMap<>();
         governments = new HashMap<>();
+        loadGovernments();
+        loadShops();
+//        loadVulnerables();
 //        loadData();
     }
 

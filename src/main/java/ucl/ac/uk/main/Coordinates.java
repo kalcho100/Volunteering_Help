@@ -12,7 +12,7 @@ public class Coordinates {
     private final String GOOGLE_API_KEY;
 
     public Coordinates(){
-        this.GOOGLE_API_KEY = ;
+        this.GOOGLE_API_KEY = "";
     }
 
     public ArrayList<Double> calculateCoords(String address) throws Exception{
